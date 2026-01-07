@@ -1,38 +1,46 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Core Layout Components
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'; // Import the new Footer component
+import Footer from './components/Footer';
+
+// Page Components
 import Home from './components-home/Home';
+import Services from './pages/Services'; // Importing the new Services page
 
-// Placeholder components for other pages (We can build these next!)
-const Services = () => (
-  <div className="pt-32 pb-20 text-center min-h-[60vh] bg-white dark:bg-slate-950 text-gray-900 dark:text-slate-100 transition-colors duration-500">
-    <h1 className="text-4xl font-black">Our Services</h1>
-    <p className="mt-4 text-gray-500">Deep dive into our global education solutions.</p>
-  </div>
-);
-
+// Placeholder for the Enquiry Page (We can build this next!)
 const Enquiry = () => (
-  <div className="pt-32 pb-20 text-center min-h-[60vh] bg-white dark:bg-slate-950 text-gray-900 dark:text-slate-100 transition-colors duration-500">
-    <h1 className="text-4xl font-black">Ready to Start?</h1>
-    <p className="mt-4 text-gray-500">Fill out the form below to get expert guidance.</p>
+  <div className="pt-40 pb-20 text-center min-h-screen bg-white dark:bg-slate-950 text-gray-900 dark:text-slate-100 transition-colors duration-500">
+    <div className="max-w-2xl mx-auto px-6">
+      <span className="text-[#e32926] font-bold tracking-widest text-xs uppercase">Get Started</span>
+      <h1 className="text-5xl font-black mt-4 mb-6">Ready to Start Your Journey?</h1>
+      <p className="text-gray-500 dark:text-slate-400 text-lg leading-relaxed">
+        Our specialized enrollment form is currently under construction. 
+        Soon you'll be able to register for global counseling right here!
+      </p>
+      <div className="mt-12 p-8 border-2 border-dashed border-gray-200 dark:border-slate-800 rounded-[2rem]">
+         <p className="text-sm font-medium italic text-gray-400">Registration Form Interface Coming Soon...</p>
+      </div>
+    </div>
   </div>
 );
 
 function App() {
   return (
     <Router>
-      {/* The wrapper div ensures the dark theme background covers the whole screen 
-        and the flex layout pushes the footer to the bottom on short pages.
+      {/* Main Wrapper:
+        1. flex-col + min-h-screen allows the Footer to stay at the bottom.
+        2. selection:bg-[#e32926] provides a branded text-highlight color.
+        3. dark:bg-slate-950 ensures the background remains dark on theme toggle.
       */}
       <div className="min-h-screen bg-white dark:bg-slate-950 flex flex-col transition-colors duration-500 selection:bg-[#e32926] selection:text-white">
         
-        {/* Fixed Navbar */}
+        {/* Navigation Bar - Stays fixed at the top */}
         <Navbar />
         
-        {/* Main content area: 
-           'flex-grow' ensures this takes up all available space, 
-           pushing the footer down even if the page content is short.
+        {/* Main Content Area: 
+           'flex-grow' pushes the footer down if content is short.
         */}
         <main className="flex-grow">
           <Routes>
@@ -42,7 +50,7 @@ function App() {
           </Routes>
         </main>
 
-        {/* Premium Footer */}
+        {/* Premium Footer - Shared across all pages */}
         <Footer />
         
       </div>
