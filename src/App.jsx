@@ -7,9 +7,21 @@ import Footer from './components/Footer';
 
 // Page Components
 import Home from './components-home/Home';
-import Services from './pages/Services'; // Importing the new Services page
+import Services from './pages/Services'; 
+import USUniversities from './components-country/us/us';
 
-// Placeholder for the Enquiry Page (We can build this next!)
+// Individual University Eligibility Imports
+// Make sure these files exist in your: src/components-country/us/eligibility/ directory
+import HarvardEligibility from './components-country/us/eligibility/HarvardEligibility';
+// Import other universities as you create them:
+import StanfordEligibility from './components-country/us/eligibility/StanfordEligibility';
+import MITEligibility from './components-country/us/eligibility/MITEligibility';
+import PrincetonEligibility from './components-country/us/eligibility/PrincetonEligibility';
+import YaleEligibility from './components-country/us/eligibility/YaleEligibility';
+import CarnegiemellonEligibility from './components-country/us/eligibility/CarnegiemellonEligibility';
+import UCBerkeleyEligibility from './components-country/us/eligibility/UCBerkeleyEligibility';
+
+// Placeholder for the Enquiry Page
 const Enquiry = () => (
   <div className="pt-40 pb-20 text-center min-h-screen bg-white dark:bg-slate-950 text-gray-900 dark:text-slate-100 transition-colors duration-500">
     <div className="max-w-2xl mx-auto px-6">
@@ -29,28 +41,40 @@ const Enquiry = () => (
 function App() {
   return (
     <Router>
-      {/* Main Wrapper:
-        1. flex-col + min-h-screen allows the Footer to stay at the bottom.
-        2. selection:bg-[#e32926] provides a branded text-highlight color.
-        3. dark:bg-slate-950 ensures the background remains dark on theme toggle.
-      */}
       <div className="min-h-screen bg-white dark:bg-slate-950 flex flex-col transition-colors duration-500 selection:bg-[#e32926] selection:text-white">
         
-        {/* Navigation Bar - Stays fixed at the top */}
+        {/* Navigation Bar */}
         <Navbar />
         
-        {/* Main Content Area: 
-           'flex-grow' pushes the footer down if content is short.
-        */}
+        {/* Main Content Area */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            
+            {/* USA Universities Landing Page */}
+            <Route path="/countries/us" element={<USUniversities />} />
+            
+            {/* Individual Eligibility Routes */}
+            {/* These paths MUST match the 'path' property in your USUniversities.jsx data array */}
+            <Route path="/eligibility/harvard" element={<HarvardEligibility />} />
+            <Route path="/eligibility/stanford" element={<StanfordEligibility />} />
+            <Route path="/eligibility/mit" element={<MITEligibility />} /> 
+            <Route path="/eligibility/princeton" element={<PrincetonEligibility />} />
+            <Route path="/eligibility/yale" element={<YaleEligibility />} />
+            <Route path="/eligibility/carnegie-mellon" element={<CarnegiemellonEligibility />} />
+            <Route path="/eligibility/uc-berkeley" element={<UCBerkeleyEligibility />} />
+
+            {/* Add more routes here as you build the files:
+            
+            
+            */}
+            
             <Route path="/enquiry" element={<Enquiry />} />
           </Routes>
         </main>
 
-        {/* Premium Footer - Shared across all pages */}
+        {/* Premium Footer */}
         <Footer />
         
       </div>

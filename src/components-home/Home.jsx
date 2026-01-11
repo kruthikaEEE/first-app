@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, MessageCircle, Globe, Plane, GraduationCap, Languages, Award, Users, BookOpen, TrendingUp, Calendar, DollarSign } from 'lucide-react';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [hoveredDestination, setHoveredDestination] = useState(null);
+  const navigate = useNavigate();
 
   const slides = [
     {
@@ -509,7 +511,14 @@ const Home = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="w-full mt-4 bg-gradient-to-r from-[#e32926] to-red-600 hover:from-red-600 hover:to-[#e32926] text-white py-3 rounded-full text-sm font-bold shadow-lg hover:shadow-red-500/50 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                    <button
+                      className="w-full mt-4 bg-gradient-to-r from-[#e32926] to-red-600 hover:from-red-600 hover:to-[#e32926] text-white py-3 rounded-full text-sm font-bold shadow-lg hover:shadow-red-500/50 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
+                      onClick={() => {
+                        if (destination.code === 'US') {
+                          navigate('/countries/us');
+                        }
+                      }}
+                    >
                       Explore Programs
                       <ChevronRight size={16} />
                     </button>
