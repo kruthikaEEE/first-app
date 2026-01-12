@@ -42,6 +42,14 @@ import UtsEligibility from './components-country/australia/eligibility/UtsEligib
 import DeakinEligibility from './components-country/australia/eligibility/DeakinEligibility';
 import MacquarieEligibility from './components-country/australia/eligibility/MacqarieEligibility';
 
+// Austria Universities & Eligibility Imports
+import AustriaUniversities from './components-country/austria/austria';
+import AustriaEligibilityDetail from './components-country/austria/EligibilityDetail';
+
+// Poland Universities & Eligibility Imports
+import PolandUniversities from './components-country/poland/poland';
+import PolandEligibilityDetail from './components-country/poland/EligibilityDetail';
+
 // Placeholder for the Enquiry Page
 const Enquiry = () => (
   <div className="pt-40 pb-20 text-center min-h-screen bg-white dark:bg-slate-950 text-gray-900 dark:text-slate-100 transition-colors duration-500">
@@ -106,6 +114,14 @@ function App() {
             <Route path="/eligibility/uts" element={<UtsEligibility />} />
             <Route path="/eligibility/deakin" element={<DeakinEligibility />} />
             <Route path="/eligibility/macquarie" element={<MacquarieEligibility />} />
+
+            {/* Austria Universities Landing & Eligibility Pages */}
+            <Route path="/countries/austria" element={<AustriaUniversities />} />
+            <Route path="/country/austria/:uniName" element={<AustriaEligibilityDetail />} />
+
+            {/* Poland Universities Landing & Eligibility Pages */}
+            <Route path="/countries/poland" element={<PolandUniversities />} />
+            <Route path="/country/poland/:uniName" element={<PolandEligibilityDetail />} />
 
             {/* Add more routes here as you build the files:
             

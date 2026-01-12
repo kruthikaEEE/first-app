@@ -9,9 +9,7 @@ import {
   ChevronRight, 
   Star,
   Building2,
-  Briefcase,
-  Lightbulb,
-  Award
+  Briefcase
 } from 'lucide-react';
 
 const UniversityCard = ({ uni }) => {
@@ -47,35 +45,27 @@ const UniversityCard = ({ uni }) => {
         {/* Quick Stats Grid */}
         <div className="grid grid-cols-2 gap-4 mb-8">
           <div className="bg-gray-50 dark:bg-slate-800/50 p-3 rounded-2xl">
-            <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1">Tuition/Year</p>
+            <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1">
+              Tuition/Year
+            </p>
             <div className="flex items-center gap-1 text-blue-600 dark:text-blue-400 font-bold">
               <DollarSign size={14} />
               <span>{uni.tuition}</span>
             </div>
           </div>
           <div className="bg-gray-50 dark:bg-slate-800/50 p-3 rounded-2xl">
-            <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1">Research</p>
-            <div className="flex items-center gap-1 text-purple-600 dark:text-purple-400 font-bold">
-              <Lightbulb size={14} />
+            <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1">
+              Research
+            </p>
+            <div className="flex items-center gap-1 text-green-600 dark:text-green-400 font-bold">
+              <TrendingUp size={14} />
               <span>{uni.research}</span>
             </div>
           </div>
         </div>
 
-        {/* Specializations */}
+        {/* Highlights */}
         <div className="space-y-4">
-          <h4 className="text-xs font-black uppercase tracking-widest text-gray-400">Specializations</h4>
-          <div className="flex flex-wrap gap-2">
-            {uni.specializations.map((spec, idx) => (
-              <span key={idx} className="text-xs bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full font-semibold">
-                {spec}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Deep Dive Highlights */}
-        <div className="space-y-4 mt-6">
           <h4 className="text-xs font-black uppercase tracking-widest text-gray-400">Why this University?</h4>
           <ul className="space-y-3">
             {uni.highlights.map((item, idx) => (
@@ -94,9 +84,25 @@ const UniversityCard = ({ uni }) => {
 
       {/* Footer Action */}
       <div className="p-6 pt-0 mt-auto">
-        <button 
+        <button
           onClick={() => navigate(uni.path)}
-          className="w-full bg-gray-900 dark:bg-white dark:text-gray-900 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:hover:text-white transition-all group-hover:scale-[1.02]"
+          className="
+            w-full
+            text-sm md:text-base
+            font-bold
+            py-4
+            rounded-2xl
+            flex items-center justify-center gap-2
+            transition-all
+            group-hover:scale-[1.02]
+            shadow-md
+
+            bg-blue-600 text-white
+            hover:bg-blue-500
+
+            dark:bg-blue-500 dark:text-white
+            dark:hover:bg-blue-400
+          "
         >
           Check Eligibility <ChevronRight size={18} />
         </button>
@@ -226,22 +232,25 @@ const AustriaUniversities = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-6 tracking-tight leading-none">
-              Elite <span className="text-red-600">Austria</span> Institutions
+              Top <span className="text-blue-600">Austrian</span> Universities
             </h1>
             <p className="text-xl text-gray-600 dark:text-slate-400 font-medium leading-relaxed">
-              Explore 6+ detailed profiles of top-ranked universities for your 2026 intake.
+              Explore 6+ leading Austrian institutions ideal for Engineering, IT, Research, and affordable higher education.
             </p>
           </div>
 
           {/* Search Bar */}
           <div className="relative w-full md:w-96 group">
             <div className="absolute inset-y-0 left-5 flex items-center pointer-events-none">
-              <Search size={20} className="text-gray-400 group-focus-within:text-red-500 transition-colors" />
+              <Search
+                size={20}
+                className="text-gray-400 group-focus-within:text-blue-500 transition-colors"
+              />
             </div>
-            <input 
-              type="text" 
-              placeholder="Search by name or location..." 
-              className="w-full pl-14 pr-6 py-5 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-3xl shadow-sm focus:ring-4 focus:ring-red-500/10 focus:border-red-500 transition-all outline-none dark:text-white"
+            <input
+              type="text"
+              placeholder="Search by name or location..."
+              className="w-full pl-14 pr-6 py-5 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-3xl shadow-sm focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none dark:text-white"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -250,27 +259,37 @@ const AustriaUniversities = () => {
 
         {/* Stats Summary Bar */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="flex items-center gap-4 bg-red-600 p-6 rounded-[2.5rem] text-white">
-                <div className="p-3 bg-white/20 rounded-2xl"><Building2 /></div>
-                <div>
-                    <div className="text-2xl font-black">6+</div>
-                    <div className="text-sm opacity-80 font-bold">Top Public Universities</div>
-                </div>
+          <div className="flex items-center gap-4 bg-blue-600 p-6 rounded-[2.5rem] text-white">
+            <div className="p-3 bg-white/20 rounded-2xl">
+              <Building2 />
             </div>
-            <div className="flex items-center gap-4 bg-gray-900 dark:bg-slate-800 p-6 rounded-[2.5rem] text-white">
-                <div className="p-3 bg-white/20 rounded-2xl"><DollarSign /></div>
-                <div>
-                    <div className="text-2xl font-black">€696/Sem</div>
-                    <div className="text-sm opacity-80 font-bold">Low Tuition Rates</div>
-                </div>
+            <div>
+              <div className="text-2xl font-black">6+</div>
+              <div className="text-sm opacity-80 font-bold">Featured Universities</div>
             </div>
-            <div className="flex items-center gap-4 bg-amber-500 p-6 rounded-[2.5rem] text-white">
-                <div className="p-3 bg-white/20 rounded-2xl"><Award /></div>
-                <div>
-                    <div className="text-2xl font-black">Research</div>
-                    <div className="text-sm opacity-80 font-bold">World-Class Facilities</div>
-                </div>
+          </div>
+          <div className="flex items-center gap-4 bg-gray-900 dark:bg-slate-800 p-6 rounded-[2.5rem] text-white">
+            <div className="p-3 bg-white/20 rounded-2xl">
+              <Briefcase />
             </div>
+            <div>
+              <div className="text-2xl font-black">€696/Sem</div>
+              <div className="text-sm opacity-80 font-bold">
+                Low Tuition Rates
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 bg-amber-500 p-6 rounded-[2.5rem] text-white">
+            <div className="p-3 bg-white/20 rounded-2xl">
+              <GraduationCap />
+            </div>
+            <div>
+              <div className="text-2xl font-black">Research</div>
+              <div className="text-sm opacity-80 font-bold">
+                World-Class Facilities
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Dynamic Grid */}
