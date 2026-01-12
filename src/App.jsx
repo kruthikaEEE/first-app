@@ -4,6 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Core Layout Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
+import SuccessStories from './pages/SuccessStories';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/Terms';
+import CookiePolicy from './pages/CookiePolicy';
+import HelpCenter from './pages/HelpCenter';
 
 // Page Components
 import Home from './components-home/Home';
@@ -87,6 +93,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/success-stories" element={<SuccessStories />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="/help-center" element={<HelpCenter />} />
             
             {/* USA Universities Landing Page */}
             <Route path="/countries/us" element={<USUniversities />} />
