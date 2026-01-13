@@ -440,6 +440,19 @@ const Home = () => {
                           navigate('/countries/us');
                         } else if (destination.code === 'AU') {
                           navigate('/countries/australia');
+                        } else if (destination.code === 'AT') {
+                          navigate('/countries/austria');
+                        } else if (destination.code === 'PL') {
+                          navigate('/countries/poland');
+                        }
+                        else if (destination.code === 'DE') {
+                          navigate('/countries/germany');
+                        }
+                        else if (destination.code === 'CA') {
+                          navigate('/countries/canada');
+                        }
+                        else if (destination.code === 'NZ') {
+                          navigate('/countries/newzealand');
                         } else if (destination.code === 'UK') {
                           // UK route -> connect to components-country/uk/uk.jsx
                           navigate('/countries/uk');
