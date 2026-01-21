@@ -67,6 +67,12 @@ import McGill from './components-country/canada/eligibility/McGill';
 import Waterloo from './components-country/canada/eligibility/Waterloo';
 import Alberta from './components-country/canada/eligibility/Alberta';
 import McMaster from './components-country/canada/eligibility/McMaster';
+import Calgary from './components-country/canada/eligibility/Calgary';
+import Queens from './components-country/canada/eligibility/Queens';
+import Western from './components-country/canada/eligibility/Western';
+import SFU from './components-country/canada/eligibility/SFU';
+import Ottawa from './components-country/canada/eligibility/Ottawa';
+import Concordia from './components-country/canada/eligibility/Concordia';
 
 // Germany Universities & Eligibility Imports
 import GermanyUniversities from './components-country/germany/GermanyUniversities';
@@ -77,6 +83,13 @@ import TUHH from './components-country/germany/eligibility/tuhh';
 import LMU from './components-country/germany/eligibility/lmu';
 import TUBerlin from './components-country/germany/eligibility/tuBerlin';
 import Stuttgart from './components-country/germany/eligibility/Stuttgart';
+import KIT from './components-country/germany/eligibility/KIT';
+import TUDarmstadt from './components-country/germany/eligibility/TUDarmstadt';
+import TUHamburg from './components-country/germany/eligibility/TUHamburg';
+import Bonn from './components-country/germany/eligibility/Bonn';
+import FAU from './components-country/germany/eligibility/FAU';
+import DuisburgEssen from './components-country/germany/eligibility/DuisburgEssen';
+
 
 // New Zealand Universities & Eligibility Imports
 import NewZealandUniversities from './components-country/newzealand/NewZealand';
@@ -87,7 +100,12 @@ import Victoria from './components-country/newzealand/eligibility/VictoriaWellin
 import Otago from './components-country/newzealand/eligibility/Otago';
 import Massey from './components-country/newzealand/eligibility/Massey';
 import AUT from './components-country/newzealand/eligibility/AUT';
-
+import Lincoln from './components-country/newzealand/eligibility/Lincoln';
+import Unitec from './components-country/newzealand/eligibility/Unitec'
+import EIT from './components-country/newzealand/eligibility/EIT';
+import SIT from './components-country/newzealand/eligibility/SIT';
+import MIT from './components-country/newzealand/eligibility/MIT'
+import OpenPolytechnic from './components-country/newzealand/eligibility/OpenPolytechnic'
 // Service Detail Pages
 import OverseasEducationDetail from './pages/services/OverseasEducationDetail';
 import ScholarshipGuidanceDetail from './pages/services/ScholarshipGuidanceDetail';
@@ -109,6 +127,9 @@ import BristolEligibility from './components-country/uk/eligibility/BristolEligi
 import WarwickEligibility from './components-country/uk/eligibility/WarwickEligibility';
 import GlasgowEligibility from './components-country/uk/eligibility/GlasgowEligibility';
 import BirminghamEligibility from './components-country/uk/eligibility/BirminghamEligibility';
+
+
+
 
 // Placeholder for the Enquiry Page
 const Enquiry = () => (
@@ -215,6 +236,12 @@ function App() {
             <Route path="/eligibility/Waterloo" element={<Waterloo />} />
             <Route path="/eligibility/Alberta" element={<Alberta />} />
             <Route path="/eligibility/McMaster" element={<McMaster />} />
+            <Route path="/eligibility/Calgary" element={<Calgary />} />
+            <Route path="/eligibility/Queens" element={<Queens />} />
+            <Route path="/eligibility/Western" element={<Western />} />
+            <Route path="/eligibility/SFU" element={<SFU />} />
+            <Route path="/eligibility/Ottawa" element={<Ottawa />} />
+            <Route path="/eligibility/Concordia" element={<Concordia />} />
 
             {/* Germany Universities Landing & Eligibility Pages */}
             <Route path="/countries/germany" element={<GermanyUniversities />} />
@@ -224,6 +251,12 @@ function App() {
             <Route path="/eligibility/lmu" element={<LMU />} />
             <Route path="/eligibility/stuttgart" element={<Stuttgart />} />
             <Route path="/eligibility/tu-berlin" element={<TUBerlin />} />
+            <Route path="/eligibility/kit" element={<KIT />} />
+            <Route path="/eligibility/tu-darmstadt" element={<TUDarmstadt />} />
+            <Route path="/eligibility/tu-hamburg" element={<TUHamburg />} />
+            <Route path="/eligibility/bonn" element={<Bonn />} />
+            <Route path="/eligibility/FAU" element={<FAU />} />
+            <Route path="/eligibility/ude" element={<DuisburgEssen />} />
 
             {/* New Zealand Universities Landing & Eligibility Pages */}
             <Route path="/countries/newzealand" element={<NewZealandUniversities />} />
@@ -233,6 +266,12 @@ function App() {
             <Route path="/eligibility/otago" element={<Otago />} />
             <Route path="/eligibility/massey" element={<Massey />} />
             <Route path="/eligibility/auckland-university-of-technology" element={<AUT />} />
+            <Route path="/eligibility/lincoln" element={<Lincoln />} />
+            <Route path="/eligibility/unitec" element={<Unitec />} />
+            <Route path="/eligibility/eit" element={<EIT />} />
+            <Route path="/eligibility/sit" element={<SIT />} />
+            <Route path="/eligibility/mit" element={<MIT />} />
+            <Route path="/eligibility/open-polytechnic" element={<OpenPolytechnic />} />
 
             <Route path="/eligibility/oxford" element={<OxfordEligibility />} />
             <Route path="/eligibility/cambridge" element={<CambridgeEligibility />} />

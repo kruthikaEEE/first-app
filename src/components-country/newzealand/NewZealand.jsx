@@ -180,7 +180,91 @@ const NewZealand = () => {
         "Strong links with New Zealand employers",
         "Modern campus with applied research strengths"
       ]
-    }
+    },
+    {
+  name: "Lincoln University",
+  location: "Christchurch",
+  rank: "#7 New Zealand",
+  salary: "NZD 65k+",
+  fees: "NZD 6–10k",
+  color: "bg-emerald-700",
+  path: "/eligibility/lincoln",
+  highlights: [
+    "Strong environmental & software systems engineering",
+    "Focus on sustainable technology and data systems",
+    "Good industry exposure in applied engineering"
+  ]
+},
+{
+  name: "Unitec Institute of Technology",
+  location: "Auckland",
+  rank: "#8 New Zealand",
+  salary: "NZD 64k+",
+  fees: "NZD 6–9k",
+  color: "bg-teal-700",
+  path: "/eligibility/unitec",
+  highlights: [
+    "Highly practical engineering programs",
+    "Strong civil, construction & electrical engineering",
+    "Industry-driven curriculum and internships"
+  ]
+},
+{
+  name: "Eastern Institute of Technology (EIT)",
+  location: "Napier",
+  rank: "#9 New Zealand",
+  salary: "NZD 62k+",
+  fees: "NZD 6–9k",
+  color: "bg-cyan-700",
+  path: "/eligibility/eit",
+  highlights: [
+    "Applied engineering and technology programs",
+    "Strong focus on employability and hands-on learning",
+    "Affordable education for international students"
+  ]
+},
+{
+  name: "Southern Institute of Technology (SIT)",
+  location: "Invercargill",
+  rank: "#10 New Zealand",
+  salary: "NZD 60k+",
+  fees: "NZD 0–6k",
+  color: "bg-slate-700",
+  path: "/eligibility/sit",
+  highlights: [
+    "Zero-fees scheme for selected programs",
+    "Strong mechanical & electrical engineering training",
+    "Good pathway programs for international students"
+  ]
+},
+{
+  name: "Manukau Institute of Technology",
+  location: "Auckland",
+  rank: "#11 New Zealand",
+  salary: "NZD 61k+",
+  fees: "NZD 6–9k",
+  color: "bg-orange-700",
+  path: "/eligibility/mit",
+  highlights: [
+    "Applied engineering and automation focus",
+    "Strong industry-aligned diploma-to-degree pathways",
+    "Good employability outcomes"
+  ]
+},
+{
+  name: "Open Polytechnic of New Zealand",
+  location: "Online / Nationwide",
+  rank: "#12 New Zealand",
+  salary: "NZD 63k+",
+  fees: "NZD 5–8k",
+  color: "bg-violet-700",
+  path: "/eligibility/open-polytechnic",
+  highlights: [
+    "Distance learning for engineering technology",
+    "Flexible study options for working professionals",
+    "Strong applied engineering curriculum"
+  ]
+}
   ];
 
   const filteredUnis = universities.filter(

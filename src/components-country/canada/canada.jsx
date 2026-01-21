@@ -180,7 +180,91 @@ const Canada = () => {
         "Strong energy, petroleum & data science programs",
         "High graduate employability and research funding"
       ]
-    }
+    },
+    {
+  name: "University of Calgary",
+  location: "Calgary, AB",
+  rank: "#7 Canada",
+  salary: "CAD 75k+",
+  fees: "CAD 6–12k",
+  color: "bg-orange-700",
+  path: "/eligibility/calgary",
+  highlights: [
+    "Strong engineering & applied research programs",
+    "Close ties with energy, AI & manufacturing industries",
+    "High employability and affordable living costs"
+  ]
+},
+{
+  name: "Queen’s University",
+  location: "Kingston, ON",
+  rank: "#8 Canada",
+  salary: "CAD 78k+",
+  fees: "CAD 7–13k",
+  color: "bg-indigo-700",
+  path: "/eligibility/queens",
+  highlights: [
+    "Highly reputed engineering faculty",
+    "Strong alumni network in Canada & US",
+    "Excellent project-based learning"
+  ]
+},
+{
+  name: "Western University",
+  location: "London, ON",
+  rank: "#9 Canada",
+  salary: "CAD 74k+",
+  fees: "CAD 6–12k",
+  color: "bg-red-800",
+  path: "/eligibility/western",
+  highlights: [
+    "Strong mechanical, electrical & software engineering",
+    "Good industry exposure and internships",
+    "Balanced academics and campus life"
+  ]
+},
+{
+  name: "Simon Fraser University (SFU)",
+  location: "Burnaby, BC",
+  rank: "#10 Canada",
+  salary: "CAD 76k+",
+  fees: "CAD 6–13k",
+  color: "bg-rose-700",
+  path: "/eligibility/sfu",
+  highlights: [
+    "Strong computer science & engineering programs",
+    "Excellent co-op opportunities",
+    "Located near Vancouver’s tech ecosystem"
+  ]
+},
+{
+  name: "University of Ottawa",
+  location: "Ottawa, ON",
+  rank: "#11 Canada",
+  salary: "CAD 75k+",
+  fees: "CAD 6–12k",
+  color: "bg-yellow-700",
+  path: "/eligibility/ottawa",
+  highlights: [
+    "Strong software, electrical & systems engineering",
+    "Bilingual education advantage",
+    "Proximity to government & tech companies"
+  ]
+},
+{
+  name: "Concordia University",
+  location: "Montreal, QC",
+  rank: "#12 Canada",
+  salary: "CAD 72k+",
+  fees: "CAD 5–11k",
+  color: "bg-cyan-700",
+  path: "/eligibility/concordia",
+  highlights: [
+    "Industry-oriented engineering programs",
+    "Strong aerospace & computer engineering",
+    "Affordable tuition and living costs"
+  ]
+}
   ];
 
   const filteredUnis = universities.filter(

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { universityImages } from '../../../config/universityImages';
 import { 
   ArrowLeft, CheckCircle2, BookOpen, 
   Globe2, FileText, Landmark, Clock, Target, Lightbulb, 
   TrendingUp, Award, Users, Sparkles, Star, Zap, Cpu
 } from 'lucide-react';
 
-const TuBerlin = () => {
+const TUBerlin = () => {
   const navigate = useNavigate();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollYProgress } = useScroll();
@@ -103,19 +104,17 @@ const TuBerlin = () => {
       {/* --- HERO SECTION --- */}
       <motion.div 
         style={{ opacity, scale }}
-        className="relative h-[70vh] w-full overflow-hidden"
+        className="relative h-[100vh] w-full overflow-hidden"
       >
         <motion.div 
-          initial={{ scale: 1.3, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
           style={{ x: mousePosition.x, y: mousePosition.y }}
           className="absolute inset-0"
         >
           <img 
-            src="/assets/colleges/tu-berlin.jpg" 
-            alt="TU Berlin Campus" 
-            className="w-full h-full object-cover"
+            src="/assets/colleges/tub.jpg"
+            alt="Technical University of Berlin" 
+            className="w-full h-full object-cover grayscale-[10%]"
+            onLoad={() => console.log('TU Berlin image loaded')}
           />
           <motion.div 
             initial={{ opacity: 0 }}
@@ -367,4 +366,4 @@ const TuBerlin = () => {
   );
 };
 
-export default TuBerlin;
+export default TUBerlin;

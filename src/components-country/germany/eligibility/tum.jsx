@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { universityImages } from '../../../config/universityImages';
 import { 
   ArrowLeft, CheckCircle2, BookOpen, 
   Globe2, FileText, Landmark, Clock, Target, Lightbulb, 
   TrendingUp, Award, Users, Sparkles, Star, Zap
 } from 'lucide-react';
 
-const tum = () => {
+const TUM = () => {
   const navigate = useNavigate();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollYProgress } = useScroll();
@@ -94,7 +95,7 @@ const tum = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950 transition-colors duration-500 pb-20 overflow-hidden">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 pb-20 overflow-hidden">
       {/* Animated Background Blobs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <motion.div 
@@ -122,22 +123,17 @@ const tum = () => {
       {/* --- HERO SECTION WITH PARALLAX IMAGE --- */}
       <motion.div 
         style={{ opacity, scale }}
-        className="relative h-[70vh] w-full overflow-hidden"
+        className="relative h-[100vh] w-full overflow-hidden"
       >
         <motion.div 
-          initial={{ scale: 1.3, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          style={{
-            x: mousePosition.x,
-            y: mousePosition.y
-          }}
+          style={{ x: mousePosition.x, y: mousePosition.y }}
           className="absolute inset-0"
         >
           <img 
-            src="/assets/colleges/tmu.jpg" 
+            src="/assets/colleges/tum.jpg"
             alt="Technical University of Munich" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover grayscale-[10%]"
+            onLoad={() => console.log('TUM image loaded')}
           />
           {/* Animated Overlay Gradients */}
           <motion.div 
@@ -526,4 +522,4 @@ const tum = () => {
   );
 };
 
-export default tum;
+export default TUM;

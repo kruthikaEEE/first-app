@@ -114,7 +114,7 @@ const Toronto = () => {
           className="absolute inset-0 z-0"
         >
           <img 
-            src="/assets/colleges/toronto1.jpg" 
+            src="/assets/colleges/toronto.jpg" 
             alt="University of Toronto" 
             className="w-full h-full object-cover"
           />

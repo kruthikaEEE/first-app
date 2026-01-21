@@ -6,6 +6,7 @@ import {
   Globe2, FileText, Landmark, Clock, Target, Lightbulb, 
   TrendingUp, Award, Users, Sparkles, Star, Zap, Settings, Car
 } from 'lucide-react';
+import { universityImages } from '../../../config/universityImages';
 
 const Stuttgart = () => {
   const navigate = useNavigate();
@@ -113,9 +114,9 @@ const Stuttgart = () => {
           className="absolute inset-0 z-0"
         >
           <img 
-            src="/assets/colleges/stuttgart.jpg" 
-            alt="University of Stuttgart Campus" 
-            className="w-full h-full object-cover"
+            src={universityImages.stuttgart}
+            alt="University of Stuttgart" 
+            className="w-full h-full object-cover grayscale-[10%]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-stone-50 dark:to-slate-950" />
         </motion.div>

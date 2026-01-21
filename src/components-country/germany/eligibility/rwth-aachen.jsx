@@ -6,6 +6,7 @@ import {
   Globe2, FileText, Landmark, Clock, Target, Lightbulb, 
   TrendingUp, Award, Users, Sparkles, Star, Zap
 } from 'lucide-react';
+import { universityImages } from '../../../config/universityImages';
 
 const rwthAachen = () => {
   const navigate = useNavigate();
@@ -135,7 +136,7 @@ const rwthAachen = () => {
           className="absolute inset-0"
         >
           <img 
-            src="/assets/colleges/rwth.jpg" 
+            src="/assets/colleges/rwth.jpg"
             alt="RWTH Aachen University" 
             className="w-full h-full object-cover grayscale-[10%]"
           />
@@ -257,7 +258,7 @@ const rwthAachen = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.5, type: "spring" }}
-              className="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-100 dark:border-stone-800 shadow-xl relative overflow-hidden group"
+              className="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 shadow-xl relative overflow-hidden group"
             >
               <motion.div
                 className={`absolute inset-0 ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}

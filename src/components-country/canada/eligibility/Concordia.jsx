@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   ArrowLeft, CheckCircle2, BookOpen, 
   Globe2, FileText, Landmark, Clock, Target, Lightbulb, 
-  TrendingUp, Award, Users, Sparkles, Star, Zap, Microscope
+  TrendingUp, Award, Users, Sparkles, Star, Zap, Palette, Rocket, Beaker
 } from 'lucide-react';
 
-const Canterbury = () => {
+const Concordia = () => {
   const navigate = useNavigate();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollYProgress } = useScroll();
@@ -52,29 +52,29 @@ const Canterbury = () => {
   const sections = [
     {
       title: "Academic Eligibility",
-      icon: <BookOpen className="text-emerald-700" />,
+      icon: <Palette className="text-cyan-600" />,
       content: [
-        { label: "Undergraduate", detail: "University Entrance (UE) or equivalent international qualification (IB 24+, A-Levels)." },
-        { label: "Engineering/Science", detail: "Specific background in Calculus and Physics often required for Year 1 entry." },
-        { label: "Graduate Programs", detail: "Bachelor's degree in a relevant field with a B average or higher in 300-level courses." }
+        { label: "Undergraduate", detail: "Minimum 75%–85% average. Portfolio required for Fine Arts." },
+        { label: "English Proficiency", detail: "Exemption if studied 3+ years in English-medium institution." },
+        { label: "Graduate Programs", detail: "Minimum 3.0 GPA on a 4.3 scale in relevant undergraduate degree." }
       ]
     },
     {
       title: "Standardized Tests",
-      icon: <Globe2 className="text-green-600" />,
+      icon: <Globe2 className="text-sky-400" />,
       content: [
-        { label: "IELTS Academic", detail: "6.0 (no band < 5.5) for UG; 6.5 - 7.0 (no band < 6.0) for Post-grad." },
-        { label: "TOEFL iBT", detail: "80+ (Reading/Writing 19+, Listening/Speaking 19+) for most programs." },
-        { label: "PTE Academic", detail: "50+ with no communicative skill score below 42." }
+        { label: "IELTS / TOEFL", detail: "7.0+ (no band < 6.5) / 90+ (with 20+ in each component)" },
+        { label: "Duolingo", detail: "120+ (Score must be sent directly from the platform)" },
+        { label: "CAEL", detail: "70 or higher (no individual band below 60)" }
       ]
     }
   ];
 
   const stats = [
-    { icon: <Users />, label: "Total Students", value: "22k+", color: "bg-emerald-800" },
-    { icon: <Microscope />, label: "Research Centers", value: "35+", color: "bg-green-700" },
-    { icon: <TrendingUp />, label: "Employment Rate", value: "92%", color: "bg-emerald-600" },
-    { icon: <Award />, label: "Global Rank", value: "#256", color: "bg-slate-900" }
+    { icon: <Rocket />, label: "Next-Gen Univ", value: "#1", color: "bg-cyan-800" },
+    { icon: <Beaker />, label: "Research Growth", value: "Top 10", color: "bg-teal-600" },
+    { icon: <Users />, label: "International", value: "22%", color: "bg-sky-700" },
+    { icon: <Award />, label: "North America Rank", value: "Top 50", color: "bg-slate-800" }
   ];
 
   return (
@@ -85,12 +85,12 @@ const Canterbury = () => {
         <motion.div 
           animate={{ x: [0, 100, 0], y: [0, -100, 0], scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-20 right-20 w-96 h-96 bg-emerald-500/10 dark:bg-emerald-900/10 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-900/10 rounded-full blur-3xl"
         />
         <motion.div 
           animate={{ x: [0, -150, 0], y: [0, 100, 0], scale: [1, 1.3, 1], rotate: [0, -90, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-green-400/5 dark:bg-white/5 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-teal-500/10 dark:bg-teal-900/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -104,25 +104,25 @@ const Canterbury = () => {
           className="absolute inset-0"
         >
           <img 
-            src="/assets/colleges/caternbury.jpg" 
-            alt="University of Canterbury" 
-            className="w-full h-full object-cover grayscale-[10%]"
+            src="/assets/colleges/concordia.jpg" 
+            alt="Concordia University" 
+            className="w-full h-full object-cover grayscale-[20%] contrast-125"
           />
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="absolute inset-0 bg-gradient-to-b from-emerald-950/70 via-green-900/30 to-slate-50 dark:to-slate-950"
+            className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-cyan-950/40 to-slate-50 dark:to-slate-950"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 via-transparent to-slate-950/40 opacity-70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/40 via-transparent to-teal-900/30 opacity-70" />
           
           {[...Array(15)].map((_, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: [0, 0.4, 0], scale: [0, 1, 0], x: Math.random() * 100 - 50, y: Math.random() * 100 - 50 }}
+              animate={{ opacity: [0, 0.5, 0], scale: [0, 1, 0], x: Math.random() * 100 - 50, y: Math.random() * 100 - 50 }}
               transition={{ duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2 }}
-              className="absolute w-2 h-2 bg-green-200 rounded-full"
+              className="absolute w-2 h-2 bg-cyan-300 rounded-full"
               style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%` }}
             />
           ))}
@@ -132,15 +132,15 @@ const Canterbury = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.8 }} className="relative">
             <motion.div
-              animate={{ boxShadow: ["0 0 20px rgba(6, 78, 59, 0.3)", "0 0 40px rgba(52, 211, 153, 0.4)", "0 0 20px rgba(6, 78, 59, 0.3)"] }}
+              animate={{ boxShadow: ["0 0 20px rgba(6, 182, 212, 0.3)", "0 0 40px rgba(6, 182, 212, 0.6)", "0 0 20px rgba(6, 182, 212, 0.3)"] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 py-3 rounded-full mb-6 font-bold"
             >
-              <Sparkles size={16} className="text-green-300" />
-              Ergo tua rura manebunt — Therefore your fields shall remain
+              <Sparkles size={16} className="text-cyan-300" />
+              Montreal's Dynamic Edge
             </motion.div>
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-4 tracking-tight">Canterbury</h1>
-            <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl mx-auto">Tangata Tū, Kainga Ora — Empowering People, Changing Lives</p>
+            <h1 className="text-6xl md:text-8xl font-black text-white mb-4 tracking-tight">Concordia</h1>
+            <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl mx-auto">Shaping the Future through Creativity</p>
           </motion.div>
         </div>
 
@@ -149,7 +149,7 @@ const Canterbury = () => {
           <motion.button 
             onClick={() => navigate(-1)}
             whileHover={{ scale: 1.05, x: -5 }}
-            className="group flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/30 text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-emerald-900 transition-all shadow-2xl relative overflow-hidden"
+            className="group flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/30 text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-cyan-900 transition-all shadow-2xl relative overflow-hidden"
           >
             <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300" />
             <ArrowLeft size={20} className="relative z-10 group-hover:-translate-x-1 transition-transform" /> 
@@ -162,7 +162,7 @@ const Canterbury = () => {
       <motion.div initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} className="max-w-7xl mx-auto px-6 -mt-20 relative z-10 mb-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, idx) => (
-            <motion.div key={idx} whileHover={{ scale: 1.05, y: -5 }} transition={{ delay: idx * 0.1, duration: 0.5, type: "spring" }} className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-green-50 dark:border-slate-800 shadow-xl relative overflow-hidden group">
+            <motion.div key={idx} whileHover={{ scale: 1.05, y: -5 }} transition={{ delay: idx * 0.1, duration: 0.5, type: "spring" }} className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-cyan-100 dark:border-slate-800 shadow-xl relative overflow-hidden group">
               <div className={`w-12 h-12 ${stat.color} rounded-2xl flex items-center justify-center mb-4 text-white transform group-hover:rotate-12 transition-transform`}>
                 {stat.icon}
               </div>
@@ -179,40 +179,40 @@ const Canterbury = () => {
           {/* LEFT COLUMN */}
           <div className="lg:col-span-1">
             <div className="lg:sticky lg:top-32 space-y-6">
-              <motion.div variants={itemVariants} className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-8 rounded-[3rem] border border-green-100 dark:border-slate-800 shadow-2xl relative overflow-hidden group">
-                <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 3, repeat: Infinity, repeatDelay: 5, ease: "easeInOut" }} className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-green-100/30 to-transparent skew-x-12" />
+              <motion.div variants={itemVariants} className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-8 rounded-[3rem] border border-cyan-100 dark:border-slate-800 shadow-2xl relative overflow-hidden group">
+                <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 3, repeat: Infinity, repeatDelay: 5, ease: "easeInOut" }} className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-cyan-100/30 to-transparent skew-x-12" />
                 
-                <motion.div variants={floatVariants} animate="animate" className="w-16 h-16 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-2xl mb-6 flex items-center justify-center shadow-xl rotate-3 relative">
+                <motion.div variants={floatVariants} animate="animate" className="w-16 h-16 bg-gradient-to-br from-cyan-800 to-teal-950 rounded-2xl mb-6 flex items-center justify-center shadow-xl rotate-3 relative">
                   <Landmark size={32} className="text-white relative z-10" />
                 </motion.div>
                 
-                <h1 className="text-4xl font-black text-slate-900 dark:text-white mb-2 leading-tight">University of <span className="text-emerald-700 italic block">Canterbury</span></h1>
+                <h1 className="text-4xl font-black text-slate-900 dark:text-white mb-2 leading-tight">Concordia <span className="text-cyan-700 italic block">University</span></h1>
                 <p className="text-slate-500 dark:text-slate-400 font-medium mb-6 flex items-center gap-2">
-                  <Star size={16} className="text-green-500 fill-green-500" />
-                  Whare Wānanga o Waitaha • Christchurch, NZ
+                  <Star size={16} className="text-sky-400 fill-sky-400" />
+                  Public Research • Montreal, QC
                 </p>
                 
-                <div className="space-y-4 pt-6 border-t border-green-50 dark:border-slate-800">
+                <div className="space-y-4 pt-6 border-t border-cyan-50 dark:border-slate-800">
                   <div className="flex justify-between items-center group/deadline">
-                    <span className="text-xs font-black uppercase text-slate-400 tracking-widest flex items-center gap-2 group-hover/deadline:text-emerald-700 transition-colors">
-                      <Clock size={14} className="text-emerald-700" /> Semester 1 (Feb)
+                    <span className="text-xs font-black uppercase text-slate-400 tracking-widest flex items-center gap-2 group-hover/deadline:text-cyan-600 transition-colors">
+                      <Clock size={14} className="text-cyan-600" /> Fall Deadline
                     </span>
-                    <span className="font-bold dark:text-white">Dec 01</span>
+                    <span className="font-bold dark:text-white">February 1</span>
                   </div>
                   <div className="flex justify-between items-center group/deadline">
-                    <span className="text-xs font-black uppercase text-slate-400 tracking-widest flex items-center gap-2 group-hover/deadline:text-emerald-700 transition-colors">
-                      <Clock size={14} className="text-emerald-700" /> Semester 2 (July)
+                    <span className="text-xs font-black uppercase text-slate-400 tracking-widest flex items-center gap-2 group-hover/deadline:text-cyan-600 transition-colors">
+                      <Clock size={14} className="text-cyan-600" /> Winter Deadline
                     </span>
-                    <span className="font-bold dark:text-white">May 01</span>
+                    <span className="font-bold dark:text-white">September 1</span>
                   </div>
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="relative bg-gradient-to-br from-emerald-800 via-emerald-950 to-green-700 p-8 rounded-[2.5rem] text-white shadow-2xl overflow-hidden group">
+              <motion.div variants={itemVariants} className="relative bg-gradient-to-br from-cyan-900 via-sky-900 to-slate-950 p-8 rounded-[2.5rem] text-white shadow-2xl overflow-hidden group">
                 <motion.div animate={{ rotate: [0, 360] }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }} className="absolute inset-0 opacity-20" style={{ background: "conic-gradient(from 0deg, transparent, rgba(255,255,255,0.3), transparent)" }} />
-                <Lightbulb className="mb-4 text-green-200" size={32} />
+                <Lightbulb className="mb-4 text-cyan-300" size={32} />
                 <p className="text-sm font-medium leading-relaxed italic relative z-10">
-                  "Canterbury provides a world-class education within a unique campus environment, focused on sustainability and community."
+                  "Concordia is where technical mastery meets creative innovation, offering a unique urban learning environment across two campuses."
                 </p>
               </motion.div>
             </div>
@@ -222,16 +222,16 @@ const Canterbury = () => {
           <div className="lg:col-span-2 space-y-8">
             <div className="grid md:grid-cols-2 gap-6">
               {sections.map((section, idx) => (
-                <motion.div key={idx} variants={itemVariants} whileHover={{ y: -8, rotateY: 2 }} className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-green-50 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-green-500/0 to-transparent group-hover:from-emerald-500/5 group-hover:via-green-500/5 transition-all duration-500" />
+                <motion.div key={idx} variants={itemVariants} whileHover={{ y: -8, rotateY: 2 }} className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-cyan-50 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-teal-500/0 to-slate-500/0 group-hover:from-cyan-500/5 group-hover:via-teal-500/5 group-hover:to-slate-500/5 transition-all duration-500" />
                   <div className="flex items-center gap-3 mb-6 relative z-10">
-                    <motion.div whileHover={{ rotate: 360, scale: 1.2 }} className="p-3 bg-emerald-50 dark:bg-slate-800 rounded-2xl">{section.icon}</motion.div>
+                    <motion.div whileHover={{ rotate: 360, scale: 1.2 }} className="p-3 bg-cyan-50 dark:bg-slate-800 rounded-2xl">{section.icon}</motion.div>
                     <h2 className="text-xl font-black dark:text-white">{section.title}</h2>
                   </div>
                   <div className="space-y-4 relative z-10">
                     {section.content.map((item, i) => (
                       <motion.div key={i} whileHover={{ x: 5 }} className="group/item">
-                        <p className="text-[10px] font-black uppercase text-slate-400 tracking-tighter group-hover/item:text-emerald-700 transition-colors flex items-center gap-2">
+                        <p className="text-[10px] font-black uppercase text-slate-400 tracking-tighter group-hover/item:text-cyan-600 transition-colors flex items-center gap-2">
                           <Zap size={10} className="opacity-0 group-hover/item:opacity-100" /> {item.label}
                         </p>
                         <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 leading-relaxed">{item.detail}</p>
@@ -243,37 +243,37 @@ const Canterbury = () => {
             </div>
 
             <motion.div variants={itemVariants} className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden border border-slate-800">
-              <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "linear-gradient(rgba(52, 211, 153, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(52, 211, 153, 0.2) 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
-              <h2 className="text-3xl font-black mb-8 flex items-center gap-3 relative z-10"><FileText className="text-green-400" /> Admission Package</h2>
+              <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
+              <h2 className="text-3xl font-black mb-8 flex items-center gap-3 relative z-10"><FileText className="text-cyan-400" /> Application Checklist</h2>
               <div className="grid md:grid-cols-2 gap-4 relative z-10">
-                {["UC myUC Portal Login", "Verified Identity Docs", "Evidence of English Level", "Academic Transcripts", "Statement of Purpose", "CV for Post-grad Entry"].map((item, i) => (
-                  <motion.div key={i} whileHover={{ x: 10, scale: 1.02 }} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10 hover:border-green-500/50 transition-all group">
-                    <CheckCircle2 size={18} className="text-green-400 group-hover:text-emerald-400" />
+                {["Online Application Portal", "Unofficial Transcripts", "English Proficiency Score", "Copy of Passport", "Letter of Intent (if required)", "Portfolio (Fine Arts Only)"].map((item, i) => (
+                  <motion.div key={i} whileHover={{ x: 10, scale: 1.02 }} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all group">
+                    <CheckCircle2 size={18} className="text-cyan-400 group-hover:text-sky-400" />
                     <span className="font-bold text-sm text-slate-300 group-hover:text-white">{item}</span>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] border border-green-100 dark:border-slate-800 shadow-sm relative overflow-hidden">
+            <motion.div variants={itemVariants} className="bg-white dark:bg-slate-900 p-10 rounded-[3rem] border border-cyan-50 dark:border-slate-800 shadow-sm relative overflow-hidden">
               <div className="flex items-center gap-3 mb-8 relative z-10">
-                <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-3xl"><Target className="text-emerald-700" size={28} /></div>
-                <h2 className="text-3xl font-black dark:text-white tracking-tight">Success Factors</h2>
+                <div className="p-4 bg-cyan-50 dark:bg-cyan-900/20 rounded-3xl"><Target className="text-cyan-700" size={28} /></div>
+                <h2 className="text-3xl font-black dark:text-white tracking-tight">The Ideal Candidate</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
                 <div className="space-y-4">
-                  {["Outdoor Resilience", "Engineering Excellence", "Bicultural Competence", "Sustainable Practice"].map((rule, i) => (
+                  {["Creative Problem Solver", "Social Responsibility", "Technological Savvy", "Multicultural Awareness"].map((rule, i) => (
                     <motion.div key={i} whileHover={{ x: 10 }} className="flex items-center gap-4 group">
-                      <div className="w-2 h-2 rounded-full bg-emerald-700 group-hover:bg-green-400" />
-                      <span className="text-md font-bold text-slate-700 dark:text-slate-300 group-hover:text-emerald-700">{rule}</span>
+                      <div className="w-2 h-2 rounded-full bg-cyan-600 group-hover:bg-sky-400" />
+                      <span className="text-md font-bold text-slate-700 dark:text-slate-300 group-hover:text-cyan-700">{rule}</span>
                     </motion.div>
                   ))}
                 </div>
-                <motion.div whileHover={{ scale: 1.05 }} className="bg-gradient-to-br from-emerald-700 via-emerald-900 to-slate-950 p-8 rounded-[2rem] text-white shadow-2xl relative overflow-hidden">
-                  <p className="text-xs font-black uppercase tracking-widest mb-2 opacity-90 relative z-10 text-green-300">Scholarship Support</p>
-                  <h4 className="text-xl font-black mb-2 relative z-10 flex items-center gap-2"><Award size={24} /> $15k - $25k</h4>
+                <motion.div whileHover={{ scale: 1.05 }} className="bg-gradient-to-br from-cyan-900 via-sky-950 to-slate-950 p-8 rounded-[2rem] text-white shadow-2xl relative overflow-hidden">
+                  <p className="text-xs font-black uppercase tracking-widest mb-2 opacity-90 relative z-10">Financial Support</p>
+                  <h4 className="text-xl font-black mb-2 relative z-10 flex items-center gap-2"><Award size={24} /> Scholarship Info</h4>
                   <p className="text-sm font-medium leading-relaxed relative z-10">
-                    Tuition approx. $32k - $45k NZD/yr. UC International First Year Scholarships recognize top academic achievers.
+                    Over $24M in entrance scholarships awarded annually. Top awards recognize academic excellence and community contribution.
                   </p>
                 </motion.div>
               </div>
@@ -284,13 +284,13 @@ const Canterbury = () => {
               <motion.button 
                 onClick={() => navigate('/enquiry')}
                 whileHover={{ scale: 1.05 }}
-                className="group relative px-12 py-6 bg-gradient-to-r from-emerald-800 via-emerald-950 to-emerald-800 text-white rounded-full font-black uppercase tracking-[0.2em] text-sm transition-all shadow-2xl overflow-hidden"
+                className="group relative px-12 py-6 bg-gradient-to-r from-cyan-800 via-sky-950 to-cyan-800 text-white rounded-full font-black uppercase tracking-[0.2em] text-sm transition-all shadow-2xl overflow-hidden"
               >
-                <motion.span initial={{ x: "-100%" }} whileHover={{ x: "100%" }} transition={{ duration: 0.6 }} className="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-300 to-green-400" />
-                <span className="relative z-10 flex items-center gap-2"><Sparkles size={18} /> Apply for Counseling</span>
+                <motion.span initial={{ x: "-100%" }} whileHover={{ x: "100%" }} transition={{ duration: 0.6 }} className="absolute inset-0 bg-gradient-to-r from-sky-600 via-cyan-700 to-sky-600" />
+                <span className="relative z-10 flex items-center gap-2"><Sparkles size={18} /> Apply to Concordia</span>
               </motion.button>
               <motion.p animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }} className="text-slate-400 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
-                <Clock size={14} className="text-emerald-700" /> Enrollment for 2026 is Open
+                <Clock size={14} className="text-cyan-600" /> Fall 2026 Admissions Closing Soon
               </motion.p>
             </motion.div>
 
@@ -301,4 +301,4 @@ const Canterbury = () => {
   );
 };
 
-export default Canterbury;
+export default Concordia;

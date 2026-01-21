@@ -6,6 +6,7 @@ import {
   Globe2, FileText, Landmark, Clock, Target, Lightbulb, 
   TrendingUp, Award, Users, Sparkles, Star, Zap
 } from 'lucide-react';
+import { universityImages } from '../../../config/universityImages';
 
 const TUHH = () => {
   const navigate = useNavigate();
@@ -122,9 +123,9 @@ const TUHH = () => {
           className="absolute inset-0"
         >
           <img 
-            src="/assets/colleges/heidelberg.jpg" 
-            alt="Heidelberg University" 
-            className="w-full h-full object-cover"
+            src={universityImages.tuHamburg}
+            alt="Hamburg University of Technology" 
+            className="w-full h-full object-cover grayscale-[10%]"
           />
           <motion.div 
             initial={{ opacity: 0 }}

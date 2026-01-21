@@ -180,7 +180,91 @@ const GermanyUniversities = () => {
         "Partnerships with Porsche & Mercedes",
         "Strong robotics research"
       ]
-    }
+    },
+    {
+  name: "Karlsruhe Institute of Technology (KIT)",
+  location: "Karlsruhe, Germany",
+  rank: "#Top Engineering",
+  salary: "€82k+",
+  fees: "€0–3k",
+  color: "bg-orange-700",
+  path: "/eligibility/kit",
+  highlights: [
+    "Germany’s leading engineering & applied science institute",
+    "Strong mechanical, electrical & computer engineering",
+    "Excellent research and industry collaboration"
+  ]
+},
+{
+  name: "TU Darmstadt",
+  location: "Darmstadt, Germany",
+  rank: "#Cybersecurity",
+  salary: "€78k+",
+  fees: "€0–2k",
+  color: "bg-sky-700",
+  path: "/eligibility/tu-darmstadt",
+  highlights: [
+    "Top university for computer science & IT security",
+    "Strong AI and data engineering research",
+    "Close ties with German research institutes"
+  ]
+},
+{
+  name: "TU Hamburg (TUHH)",
+  location: "Hamburg, Germany",
+  rank: "#Logistics & AI",
+  salary: "€75k+",
+  fees: "€0–2k",
+  color: "bg-teal-700",
+  path: "/eligibility/tu-hamburg",
+  highlights: [
+    "Strong systems engineering & AI programs",
+    "Excellent logistics and port-industry exposure",
+    "Good international English-taught programs"
+  ]
+},
+{
+  name: "University of Bonn",
+  location: "Bonn, Germany",
+  rank: "#AI Research",
+  salary: "€77k+",
+  fees: "€0–2k",
+  color: "bg-fuchsia-700",
+  path: "/eligibility/bonn",
+  highlights: [
+    "Strong mathematics, AI & computer science",
+    "Partnership with Max Planck Institutes",
+    "High research output"
+  ]
+},
+{
+  name: "FAU Erlangen-Nürnberg",
+  location: "Erlangen, Germany",
+  rank: "#Industry Linked",
+  salary: "€76k+",
+  fees: "€0–2k",
+  color: "bg-lime-700",
+  path: "/eligibility/fau",
+  highlights: [
+    "Strong electrical & industrial engineering",
+    "Close collaboration with Siemens",
+    "Excellent applied research opportunities"
+  ]
+},
+{
+  name: "University of Duisburg-Essen",
+  location: "Duisburg & Essen, Germany",
+  rank: "#Affordable Tech",
+  salary: "€72k+",
+  fees: "€0–1.5k",
+  color: "bg-cyan-800",
+  path: "/eligibility/ude",
+  highlights: [
+    "Strong mechanical & electrical engineering",
+    "Very affordable living costs",
+    "Good international student support"
+  ]
+}
   ];
 
   const filteredUnis = universities.filter(
